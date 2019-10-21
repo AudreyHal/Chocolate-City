@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Artists from './Artists'
+
 
 
 class Landing extends Component{
@@ -11,7 +13,7 @@ class Landing extends Component{
 	render(){
 		return (		
 			<div className="Landing">
-				hhhh		
+        <Artists/>
 		    </div>	
 		)
 	}
