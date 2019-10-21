@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+
 }
 
 .Artists{
   margin: 25px
+}
+.artists-header{
+  margin-bottom: 40px
 }

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import MaterialTable from 'material-table';
 import { forwardRef } from 'react';
 import axios from 'axios'
+import { connect } from 'react-redux';
+import { addParams } from '../redux/actions/action';
+
+
 
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowUpward from '@material-ui/icons/ArrowUpward';
@@ -93,20 +97,18 @@ componentDidMount=()=>{
 	
 }
 
-handleClick=(e)=>{
-	console.log(e)
-}
 
 	
 	render(){
 		return (		
 			<div className="Artists">
+				<h1 class="artists-header">Chocolate City Artists</h1>
 				<MaterialTable
 				options={options}
 				icons={tableIcons}
 				columns={this.state.columns}
 				data={this.state.data}
-				title="Artists Table"
+				title=" "
 				options={options}
 				actions={[
     {
@@ -115,6 +117,7 @@ handleClick=(e)=>{
       onClick: (event, rowData) => {
 				// Do save operation
 				console.log(rowData)
+				this.props.onSelect(rowData);
       }
     }
 	]}
@@ -125,7 +128,7 @@ components={{
               onClick={(event) => props.action.onClick(event, props.data)}
               
               variant="contained"
-              style={{textTransform: 'none', backgroundColor: 'transparent', color: 'blue'}}
+              style={{textTransform: 'none', backgroundColor: 'transparent', color: 'blue', width: '100px', borderColor:'transparent'}}
               size="small"
             >
               View More
@@ -141,4 +144,11 @@ components={{
 
 }
 
-export default Artists;
+
+
+export default connect(
+	null,
+	{
+			addParams: addParams
+	}
+)(Artists);
