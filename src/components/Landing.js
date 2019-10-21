@@ -20,8 +20,7 @@ componentDidMount=()=>{
 
 selectedUser = (childData) => {
   this.setState({user: childData, showUser: true})
-  console.log("t" + childData)
-  console.log("t" + this.state.showUser)
+  
 }
  
 	

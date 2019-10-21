@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import Albums from './Albums'
-// import Tweets from './Tweets'
+import Albums from './Albums'
 import { connect } from 'react-redux';
 import { addParams } from '../redux/actions/action';
 
@@ -35,6 +34,8 @@ componentDidMount=()=>{
                   <th scope="col">Username</th>
                   <th scope="col">Email</th>
                   <th scope="col">Phone</th>
+                  <th scope="col">Albums</th>
+                  <th scope="col">Tweets</th>
                 </tr>
               </thead>
               <tbody>
@@ -43,10 +44,14 @@ componentDidMount=()=>{
                   <td>{this.props.user.username}</td>
                   <td>{this.props.user.email}</td>
                   <td>{this.props.user.phone}</td>
+                  <td><a> View More</a></td>
+                  <td><a> View More</a></td>
                 </tr>
                
               </tbody>
             </table>
+
+           
 
 		    </div>	
 		)
