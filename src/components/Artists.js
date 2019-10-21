@@ -123,9 +123,9 @@ components={{
           Action: props => (
             <button
               onClick={(event) => props.action.onClick(event, props.data)}
-              color="primary"
+              
               variant="contained"
-              style={{textTransform: 'none'}}
+              style={{textTransform: 'none', backgroundColor: 'transparent', color: 'blue'}}
               size="small"
             >
               View More
