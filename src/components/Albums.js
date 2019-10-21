@@ -8,7 +8,6 @@ class Albums extends Component{
     }
     render(){
         return(
-
         "albums"
         )
 
